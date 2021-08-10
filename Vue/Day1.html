@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="section1">
+        <span>data1</span><span>data2</span><span>data3</span><span>data4</span
+        ><span>data5</span><span>data6</span><span>data7</span><span>data8</span
+        ><span>data9</span><span>data10</span>
+      </div>
+
+      <div id="section2">
+        <span>data1</span><span>data2</span><span>data3</span><span>data4</span
+        ><span>data5</span><span>data6</span><span>data7</span><span>data8</span
+        ><span>data9</span><span>data10</span>
+      </div>
+
+      <div id="section3">
+        <span>data1</span><span>data2</span><span>data3</span><span>data4</span
+        ><span>data5</span><span>data6</span><span>data7</span><span>data8</span
+        ><span>data9</span><span>data10</span>
+      </div>
+
+      <div id="section4">
+        <span>data1</span><span>data2</span><span>data3</span><span>data4</span
+        ><span>data5</span><span>data6</span><span>data7</span><span>data8</span
+        ><span>data9</span><span>data10</span>
+      </div>
+
+      <div id="section5">
+        <p>我是一段測試用的文字(HTML)</p>
+        <p>{{ copyright }}</p>
+        <p>{{company}} 版權所有 {{year}} 建議瀏覽器 chrome / IE11.0 以上</p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+    <script>
+      (function () {
+        new Vue({
+          el: '#section5',
+          data: {
+            copyright: '我是一段測試用的文字(Vue)',
+            company: '測試用股份有限公司',
+            year: new Date().getFullYear(),
+          },
+        });
+      })();
+    </script>
+  </body>
+</html>
