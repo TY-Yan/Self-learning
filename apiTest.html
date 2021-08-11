@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Google Maps api 串接練習</title>
+    <style>
+      #map {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        height: 90%;
+        width: 100vw;
+      }
+
+      .deomo {
+        height: 100%;
+        width: 90vw;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo">
+      <h1>My Google Maps Demo</h1>
+      <div id="map"></div>
+    </div>
+    <script>
+      function initMap() {
+        var position = { lat: 25.0496036, lng: 121.4580608 }; // 環狀線幸福站的經緯度
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16, //縮放的倍率
+          center: position, //初始化的地圖中心位置
+        });
+        var marker = new google.maps.Marker({
+          position: position, //marker的放置位置
+          map: map,
+        });
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDygECeo8tBcWpvo6_ePx_NrDVuK5VAuYA&callback=initMap"
+    ></script>
+  </body>
+</html>
